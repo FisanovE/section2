@@ -42,6 +42,10 @@ public class AccountServiceImpl implements IAccountsService {
         accountsRepository.save(createNewAccount(savedCustomer));
     }
 
+    /**
+     * @param customer - Customer Object
+     * @return the new Accounts details
+     */
     private Accounts createNewAccount(Customer customer) {
         Accounts newAccount = new Accounts();
         newAccount.setCustomerId(customer.getCustomerId());
